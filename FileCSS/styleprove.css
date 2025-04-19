@@ -68,6 +68,40 @@ footer {
     font-size: 14px
 }
 
+.carosello {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    scroll-behavior: smooth;
+
+    /* Nasconde la scrollbar */
+    scrollbar-width: none; /* Firefox */
+}
+.carosello::-webkit-scrollbar {
+    display: none; /* Chrome e Safari */
+}
+
+.recensione-card {
+    flex: 0 0 100%; /* Ogni card occupa il 100% della larghezza visibile */
+    scroll-snap-align: center;
+    background-color: #222;
+    color: #eee;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Per schermi più grandi mostriamo 2 card alla volta */
+@media (min-width: 768px) {
+    .recensione-card {
+        flex: 0 0 48%;
+    }
+}
+
 .paddingmain {padding: 2%;}
 .bordoR {border: 3px solid red;}
 .bordoY {border: 3px solid yellow;}
