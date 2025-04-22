@@ -263,6 +263,22 @@
     color: #ccc;
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;       /* Mantiene il colore originale */
+    display: block;
+}
+
+.card-link:hover .card {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #8be;
+}
+
+/* Opzionale: effetto animazione */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 
 /* IMMAGINI */
 
