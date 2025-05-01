@@ -18,7 +18,28 @@
         <div class="hero-content">
           <h1>PHASMOPHOBIA</h1>
           <p class="subtitle">Indaga. Scopri. Sopravvivi.</p>
-          <a href="#intro" class="btn">ACQUISTA</a>
+          <!-- Bottone che apre il modale -->
+<a href="#popup-piattaforme" class="btn">ACQUISTA</a>
+
+<!-- Modale -->
+<div id="popup-piattaforme" class="overlay">
+  <div class="popup">
+    <a class="chiudi" href="#">&times;</a>
+    <h2>Scegli la tua piattaforma</h2>
+    <div class="icone-piattaforme">
+      <a href="https://store.playstation.com/" target="_blank">
+        <img src="Immagini/playstation.webp" alt="PlayStation">
+      </a>
+      <a href="https://www.xbox.com/it-IT/games/store/phasmophobia" target="_blank">
+        <img src="Immagini/Xbox.svg" alt="Xbox">
+      </a>
+      <a href="https://store.steampowered.com/app/739630/Phasmophobia/" target="_blank">
+        <img src="Immagini/Steam_.png" alt="Steam">
+      </a>
+    </div>
+  </div>
+</div>
+
         </div>
     </header>
       
@@ -210,31 +231,20 @@
         </div>
         </a>
 
-        <div class="feature">
-            <h3>🕹️ Multiplayer Cooperativo</h3>
-            <p>Gioca con fino a 4 amici online. La collaborazione è essenziale per raccogliere prove e restare vivi!</p>
-        </div>
-    
+        <a href="FileHTML/mappe.html" class="card-link">
         <div class="feature">
             <h3>🏚️ Mappe Diverse</h3>
             <p>Indaga in case, scuole, prigioni e ospedali abbandonati. Ogni mappa ha stanze, oggetti e presenze diverse.</p>
         </div>
-    
-        <div class="feature">
-            <h3>🎤 Riconoscimento Vocale</h3>
-            <p>Parla realmente ai fantasmi! Il gioco utilizza il tuo microfono per reagire alle domande o alle provocazioni.</p>
-        </div>
-    
+        </a>
+
+        <a href="FileHTML/equipaggiamento.html" class="card-link">
         <div class="feature">
             <h3>🔦 Equipaggiamento da Investigatore</h3>
             <p>Termocamere, EMF, Spirit Box, Crocifissi, Fotocamere... scegli con cura gli strumenti prima di entrare!</p>
         </div>
-    
-        <div class="feature">
-            <h3>💀 Intelligenza del Fantasma</h3>
-            <p>I fantasmi imparano, si adattano e possono seguire la tua voce. Nasconditi bene, o sarai il prossimo.</p>
-        </div>
-    
+        </a>
+
         </div>
     </section>
       
@@ -245,21 +255,74 @@
     <!-- Immagini o screenshot del gioco, in griglia o con lightbox -->
     <section id="galleria" class="galleria">
         <h2>Galleria</h2>
-        <div class="grid-immagini">
-          <div class="immagine">
-            <img src="Immagini\img1.jpg" alt="Fantasma in corridoio">
-          </div>
-          <div class="immagine">
-            <img src="Immagini\img2.jpg" alt="Equipaggiamento da cacciatore">
-          </div>
-          <div class="immagine">
-            <img src="Immagini\img3.png" alt="Mappa della casa stregata">
-          </div>
-          <div class="immagine">
-            <img src="Immagini\img4.jpg" alt="Interazione con Spirit Box">
-          </div>
-        </div>
+          <div class="grid-immagini">
+            <a href="#img1" class="immagine"><img src="Immagini/img1.jpg" alt="Fantasma in corridoio"></a>
+            <a href="#img2" class="immagine"><img src="Immagini/img2.jpg" alt="Equipaggiamento da cacciatore"></a>
+            <a href="#img3" class="immagine"><img src="Immagini/img3.png" alt="Mappa della casa stregata"></a>
+            <a href="#img4" class="immagine"><img src="Immagini/img4.jpg" alt="Spirit Box"></a>
+            <a href="#img5" class="immagine"><img src="Immagini/img5.jpg" alt="Spirit Box 2"></a>
+            <a href="#img6" class="immagine"><img src="Immagini/img6.avif" alt="Spirit Box 3"></a>
+            <a href="#img7" class="immagine"><img src="Immagini/img7.avif" alt="Spirit Box 4"></a>
+            <a href="#img8" class="immagine"><img src="Immagini/img8.avif" alt="Spirit Box 5"></a>
+          </div>          
     </section>
+
+    <div class="lightbox" id="img1">
+      <a href="#img8" class="prev">&#10094;</a>
+      <img src="Immagini/img1.jpg" alt="">
+      <a href="#img2" class="next">&#10095;</a>
+      <a href="#" class="close">&times;</a>
+    </div>
+    
+    <div class="lightbox" id="img2">
+      <a href="#img1" class="prev">&#10094;</a>
+      <img src="Immagini/img2.jpg" alt="">
+      <a href="#img3" class="next">&#10095;</a>
+      <a href="#" class="close">&times;</a>
+    </div>
+    
+    <div class="lightbox" id="img3">
+      <a href="#img2" class="prev">&#10094;</a>
+      <img src="Immagini/img3.png" alt="">
+      <a href="#img4" class="next">&#10095;</a>
+      <a href="#" class="close">&times;</a>
+    </div>
+
+    <div class="lightbox" id="img4">
+      <a href="#img3" class="prev">&#10094;</a>
+      <img src="Immagini/img4.jpg" alt="">
+      <a href="#img5" class="next">&#10095;</a>
+      <a href="#" class="close">&times;</a>
+    </div>
+
+    <div class="lightbox" id="img5">
+      <a href="#img4" class="prev">&#10094;</a>
+      <img src="Immagini/img5.jpg" alt="">
+      <a href="#img6" class="next">&#10095;</a>
+      <a href="#" class="close">&times;</a>
+    </div>
+
+    <div class="lightbox" id="img6">
+      <a href="#img5" class="prev">&#10094;</a>
+      <img src="Immagini/img6.avif" alt="">
+      <a href="#img7" class="next">&#10095;</a>
+      <a href="#" class="close">&times;</a>
+    </div>
+
+    <div class="lightbox" id="img7">
+      <a href="#img6" class="prev">&#10094;</a>
+      <img src="Immagini/img7.avif" alt="">
+      <a href="#img8" class="next">&#10095;</a>
+      <a href="#" class="close">&times;</a>
+    </div>
+    
+    <div class="lightbox" id="img8">
+      <a href="#img7" class="prev">&#10094;</a>
+      <img src="Immagini/img8.avif" alt="">
+      <a href="#img1" class="next">&#10095;</a>
+      <a href="#" class="close">&times;</a>
+    </div>
+    
       
     <!-- FOOTER -->
     <!-- Contatti, info legali, crediti, copyright -->
