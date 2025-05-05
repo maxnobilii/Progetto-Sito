@@ -1,0 +1,109 @@
+*{box-sizing: border-box;}
+
+@font-face {
+    font-family: 'October Crow';
+    src: url('Font/october_crow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lazy Dog';
+    src: url('../Font/lazy_dog.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Patrick Hand';
+    src: url('../Font/patrick_hand.ttf') format('truetype');
+}
+
+body {
+    background-color: #111;
+    color: #eee;   
+    margin: 0;
+    padding: 0px;
+    font-family: 'Patrick Hand', sans-serif;
+}
+
+.titolo {
+    background-color: #222;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 0px;
+    font-family: 'October Crow', sans-serif;
+}
+
+
+nav ul {
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #8be;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #8be;
+}
+
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 14px
+}
+
+.carosello {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    scroll-behavior: smooth;
+
+    /* Nasconde la scrollbar */
+    scrollbar-width: none; /* Firefox */
+}
+.carosello::-webkit-scrollbar {
+    display: none; /* Chrome e Safari */
+}
+
+.recensione-card {
+    flex: 0 0 100%; /* Ogni card occupa il 100% della larghezza visibile */
+    scroll-snap-align: center;
+    background-color: #222;
+    color: #eee;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Per schermi più grandi mostriamo 2 card alla volta */
+@media (min-width: 768px) {
+    .recensione-card {
+        flex: 0 0 48%;
+    }
+}
+
+.paddingmain {padding: 2%;}
+.bordoR {border: 3px solid red;}
+.bordoY {border: 3px solid yellow;}
+.bordoG {border: 3px solid green;}
+.bordoB {border: 3px solid blue;}
