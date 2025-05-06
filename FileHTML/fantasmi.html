@@ -2,29 +2,40 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Fantasmi - Phasmophobia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasmi - Carosello CSS</title>
   <link rel="stylesheet" href="../FileCSS/fantasmi.css">
 </head>
 <body>
-  <main class="carousel-container">
-    <div class="carousel-card visible">
-      <h2 class="ghost-name" style="background-image: url('../Immagini/Icon_Fantasmi/Spirit_Discovered.png');">
-        Spirit
-      </h2>
-      <p class="ghost-description">
-        Lo Spirit è uno dei fantasmi più comuni, ma non va sottovalutato. Non ha abilità speciali, ma può ancora causare molta paura se ignorato.
-      </p>
+
+  <!-- RADIO BUTTONS -->
+  <input type="radio" name="ghost" id="ghost1" checked>
+  <input type="radio" name="ghost" id="ghost2">
+  <input type="radio" name="ghost" id="ghost3">
+
+  <!-- CONTENITORE -->
+  <div class="carousel-container">
+    <div class="carousel-card ghost1">
+      <h2 class="ghost-name" style="background-image: url('../Immagini/Icon_Fantasmi/Spirit_Discovered.png');">Spirit</h2>
+      <p class="ghost-description">Il classico spirito, il più comune tra i fantasmi.</p>
     </div>
 
-    <div class="carousel-card">
-      <h2 class="ghost-name" style="background-image: url('../Immagini/Icone/nome_fantasma_2.png');">
-        Fantasma 2
-      </h2>
-      <p class="ghost-description">
-        Descrizione del secondo fantasma. Può muovere oggetti o causare eventi paranormali unici.
-      </p>
+    <div class="carousel-card ghost2">
+      <h2 class="ghost-name" style="background-image: url('../Immagini/Icon_Fantasmi/Wraith_Discovered.png');">Phantom</h2>
+      <p class="ghost-description">Un fantasma che teme la fotografia. Guardarlo diminuisce la sanità mentale.</p>
     </div>
-  </main>
+
+    <div class="carousel-card ghost3">
+      <h2 class="ghost-name" style="background-image: url('../Immagini/Icon_Fantasmi/Jinn_Discovered.png');">Jinn</h2>
+      <p class="ghost-description">Veloce quando la corrente è attiva. Attenzione ai quadri elettrici!</p>
+    </div>
+  </div>
+
+  <!-- BOTTONI DI NAVIGAZIONE -->
+  <div class="nav-buttons">
+    <label for="ghost1">1</label>
+    <label for="ghost2">2</label>
+    <label for="ghost3">3</label>
+  </div>
+
 </body>
 </html>

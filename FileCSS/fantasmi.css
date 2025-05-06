@@ -5,67 +5,129 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Lazy Dog';
+    src: url('../Font/lazy_dog.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Lazy Dog';
+    src: url('../Font/lazy_dog.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset e stile base */
 body {
-    background-color: #0d0d0d;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Container che centralizza il contenuto come uno slider full screen */
-.carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+/* Nascondi radio buttons */
+.radio-buttons input[type="radio"] {
+  display: none;
 }
 
-/* Card nascosta di default */
-.carousel-card {
+input[type="radio"] {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    padding: 40px;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.03);
-    transition: opacity 0.5s ease-in-out;
+}
+  
+/* Container del carosello */
+.carousel-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Card visibile */
-.carousel-card.visible {
-    display: flex;
-    opacity: 1;
+/* Card dei fantasmi */
+.carousel-card {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
-/* Titolo del fantasma con sfondo dinamico */
+/* Mostra la card corrispondente al radio button selezionato */
+#ghost1:checked ~ .carousel-container .ghost1,
+#ghost2:checked ~ .carousel-container .ghost2,
+#ghost3:checked ~ .carousel-container .ghost3,
+#ghost4:checked ~ .carousel-container .ghost4,
+#ghost5:checked ~ .carousel-container .ghost5,
+#ghost6:checked ~ .carousel-container .ghost6,
+#ghost7:checked ~ .carousel-container .ghost7,
+#ghost8:checked ~ .carousel-container .ghost8,
+#ghost9:checked ~ .carousel-container .ghost9,
+#ghost10:checked ~ .carousel-container .ghost10,
+#ghost11:checked ~ .carousel-container .ghost11,
+#ghost12:checked ~ .carousel-container .ghost12,
+#ghost13:checked ~ .carousel-container .ghost13,
+#ghost14:checked ~ .carousel-container .ghost14,
+#ghost15:checked ~ .carousel-container .ghost15,
+#ghost16:checked ~ .carousel-container .ghost16,
+#ghost17:checked ~ .carousel-container .ghost17,
+#ghost18:checked ~ .carousel-container .ghost18,
+#ghost19:checked ~ .carousel-container .ghost19,
+#ghost20:checked ~ .carousel-container .ghost20,
+#ghost21:checked ~ .carousel-container .ghost21,
+#ghost22:checked ~ .carousel-container .ghost22,
+#ghost23:checked ~ .carousel-container .ghost23,
+#ghost24:checked ~ .carousel-container .ghost24 {
+  display: block;
+}
+
+/* Stile del nome del fantasma */
 .ghost-name {
-    width: 100%;
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(2rem, 5vw, 6rem);
-    font-family: 'Lazy Dog', 'Creepster', cursive;
-    color: white;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.4);
-    text-shadow: 2px 2px 8px black;
-    border-radius: 12px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8vw;
+  font-family: 'Lazy Dog', cursive;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 5px black;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
-/* Testo descrizione */
+/* Descrizione del fantasma */
 .ghost-description {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: #ccc;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Bottoni di navigazione */
+.nav-buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav-buttons label {
+  padding: 8px 12px;
+  background: #333;
+  color: white;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.nav-buttons label:hover {
+  background: #555;
 }
