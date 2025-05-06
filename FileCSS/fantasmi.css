@@ -114,20 +114,27 @@ input[type="radio"] {
 
 /* Bottoni di navigazione */
 .nav-buttons {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.nav-buttons label {
-  padding: 8px 12px;
-  background: #333;
-  color: white;
-  margin: 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: 0.3s;
-}
-
-.nav-buttons label:hover {
-  background: #555;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 90%;
+    padding: 10px;
+  }
+  
+  .nav-buttons label {
+    padding: 10px 16px;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .nav-buttons label:hover {
+    background: #555;
+  }
+  
