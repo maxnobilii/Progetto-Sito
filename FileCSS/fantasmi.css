@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Lazy Dog';
+    src: url('../Font/lazy_dog.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: #0d0d0d;
     color: #ffffff;
@@ -6,15 +13,16 @@ body {
     padding: 0;
 }
 
+/* Container che centralizza il contenuto come uno slider full screen */
 .carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 0;
     overflow: hidden;
 }
 
+/* Card nascosta di default */
 .carousel-card {
     display: none;
     flex-direction: column;
@@ -23,46 +31,41 @@ body {
     padding: 40px;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.03);
+    transition: opacity 0.5s ease-in-out;
 }
 
+/* Card visibile */
 .carousel-card.visible {
     display: flex;
+    opacity: 1;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /* Esempio font horror */
-
-@font-face {
-    font-family: 'Lazy Dog';
-    src: url('../Font/lazy_dog.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Nome del fantasma con sfondo adattabile */
+/* Titolo del fantasma con sfondo dinamico */
 .ghost-name {
-  width: 100%;
-  height: 40vh; /* Altezza responsiva: 40% dell’altezza della finestra */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5vw; /* Dimensione del testo responsiva */
-  font-family: 'Lazy Dog', cursive; /* Font personalizzato */
-  color: white;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.4); /* overlay scuro per leggibilità */
-  text-shadow: 2px 2px 5px black;
-  border-radius: 12px;
-  margin-bottom: 20px;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2rem, 5vw, 6rem);
+    font-family: 'Lazy Dog', 'Creepster', cursive;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 8px black;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
 
-  
-  
-
+/* Testo descrizione */
 .ghost-description {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.6;
     color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
 }
