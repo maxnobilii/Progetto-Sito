@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'Lazy Dog';
+    src: url('../Font/lazy_dog.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Patrick Hand';
+    src: url('../Font/patrick_hand.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'October Crow';
+    src: url('../Font/october_crow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset e stile base */
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Patrick Hand', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* Nascondi radio buttons */
+.radio-buttons input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+  
+/* Container del carosello */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+
+/* Mostra la card corrispondente al radio button selezionato */
+#equip1:checked ~ .carousel-wrapper .carousel-container .equip1,
+#equip2:checked ~ .carousel-wrapper .carousel-container .equip2,
+#equip3:checked ~ .carousel-wrapper .carousel-container .equip3,
+#equip4:checked ~ .carousel-wrapper .carousel-container .equip4,
+#equip5:checked ~ .carousel-wrapper .carousel-container .equip5,
+#equip6:checked ~ .carousel-wrapper .carousel-container .equip6,
+#equip7:checked ~ .carousel-wrapper .carousel-container .equip7,
+#equip8:checked ~ .carousel-wrapper .carousel-container .equip8,
+#equip9:checked ~ .carousel-wrapper .carousel-container .equip9,
+#equip10:checked ~ .carousel-wrapper .carousel-container .equip10,
+#equip11:checked ~ .carousel-wrapper .carousel-container .equip11,
+#equip12:checked ~ .carousel-wrapper .carousel-container .equip12,
+#equip13:checked ~ .carousel-wrapper .carousel-container .equip13,
+#equip14:checked ~ .carousel-wrapper .carousel-container .equip14, 
+#equip15:checked ~ .carousel-wrapper .carousel-container .equip15,
+#equip16:checked ~ .carousel-wrapper .carousel-container .equip16,
+#equip17:checked ~ .carousel-wrapper .carousel-container .equip17,
+#equip18:checked ~ .carousel-wrapper .carousel-container .equip18,
+#equip19:checked ~ .carousel-wrapper .carousel-container .equip19,
+#equip20:checked ~ .carousel-wrapper .carousel-container .equip20 {
+    display: block;
+}
+
+
+/* Stile del nome dell equipaggiamento */
+.equip-name {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'Lazy Dog', cursive;
+    color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 5px black;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Descrizione dell equipaggiamento */
+.equip-description {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* equip immagini 
+.equip-image {
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    border: 2px solid #444;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .equip-image:hover {
+    transform: scale(1.05);
+  } */
+
+  .equip-name {
+    background-size: contain;       /* Mantiene le proporzioni dell'immagine */
+    background-position: center;    /* Centra l'immagine */
+    background-repeat: no-repeat;   /* Non ripete l'immagine */
+    width: 100%;
+    height: 300px;                  /* Altezza consigliata, regolabile */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px black;
+  }
+
+.footer {
+    background-color: #111;
+    color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+    border-top: 1px solid #333;
+  }
+  
+  .footer-left h2 {
+    font-family: 'October Crow', sans-serif;
+    font-size: 500%;
+    color: #fff;
+  }
+  
+  .footer-center {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-col h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #8be;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-col ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-col ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #8be;
+  }
+  
+  .footer-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .footer-right img {
+    width: 64px;
+    height: 64px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-right img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    }
+  
+    .footer-center {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    }
+  
+    .footer-right {
+    margin-top: 20px;
+    }
+  }
+  
+  
+  main {
+    padding-bottom: 200px;
+    z-index: 0;
+    position: relative;
+  }
