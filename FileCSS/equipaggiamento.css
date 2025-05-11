@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'Lazy Dog';
+    src: url('../Font/lazy_dog.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Patrick Hand';
+    src: url('../Font/patrick_hand.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'October Crow';
+    src: url('../Font/october_crow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset e stile base */
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Patrick Hand', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* Nascondi radio buttons */
+.radio-buttons input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+
+/* Card per equipaggiamenti */
+.equipment-card {
+  display: none;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Mostra la card corrispondente al radio button selezionato */
+/* Mostra la card attiva dell'equipaggiamento */
+#eq1:checked ~ main .eq1,
+#eq2:checked ~ main .eq2,
+#eq3:checked ~ main .eq3,
+#eq4:checked ~ main .eq4,
+#eq5:checked ~ main .eq5,
+#eq6:checked ~ main .eq6,
+#eq7:checked ~ main .eq7,
+#eq8:checked ~ main .eq8,
+#eq9:checked ~ main .eq9,
+#eq10:checked ~ main .eq10,
+#eq11:checked ~ main .eq11,
+#eq12:checked ~ main .eq12,
+#eq13:checked ~ main .eq13,
+#eq14:checked ~ main .eq14,
+#eq15:checked ~ main .eq15,
+#eq16:checked ~ main .eq16,
+#eq17:checked ~ main .eq17,
+#eq18:checked ~ main .eq18,
+#eq19:checked ~ main .eq19,
+#eq20:checked ~ main .eq20 {
+  display: block;
+}
+
+
+
+/* Stile del nome dell equipaggiamento */
+.equipment-name {
+  font-family: 'Lazy Dog', cursive;
+  font-size: 6vw;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 6px black;
+}
+
+.equipment-levels {
+  display: flex;
+  justify-content: space-between; 
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.equipment-levels img {
+  flex: 1 1 30%;
+  max-width: 25%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px black);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+
+.equipment-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Bottoni di navigazione */
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 90%;
+  padding: 10px;
+  }
+
+  .nav-buttons label {
+  padding: 10px 16px;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  }
+
+  .nav-buttons label:hover {
+  background: #555;
+  }
+
+/* FOOTER */
+.footer {
+  background-color: #111;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+  border-top: 1px solid #333;
+}
+
+.footer-left h2 {
+  font-family: 'October Crow', sans-serif;
+  font-size: 500%;
+  color: #fff;
+}
+
+.footer-center {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-col h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #8be;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 5px 0;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #8be;
+}
+
+.footer-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-right img {
+  width: 64px;
+  height: 64px;
+  transition: transform 0.3s ease;
+}
+
+.footer-right img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  
+  .equipment-levels img {
+    flex: 1 1 100%;
+    max-width: 25%;
+    margin: 0 auto;
+  }
+  
+  .footer {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  }
+
+  .footer-center {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  }
+
+  .footer-right {
+  margin-top: 20px;
+  }
+}
+
+
+main {
+  padding-bottom: 200px;
+  z-index: 0;
+  position: relative;
+}
