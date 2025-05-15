@@ -1,0 +1,69 @@
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Patrick Hand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 4rem;
+  margin: 40px 0 20px;
+  font-family: 'Lazy Dog', cursive;
+}
+
+.cursed-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.cursed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cursed-card {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.cursed-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 5px black);
+}
+
+.cursed-info h2 {
+  font-size: 1.8rem;
+  font-family: 'October Crow', sans-serif;
+  margin-bottom: 10px;
+}
+
+.cursed-info p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .cursed-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cursed-img {
+    width: 100%;
+    height: auto;
+  }
+}
