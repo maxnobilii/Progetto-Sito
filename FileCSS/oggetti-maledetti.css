@@ -87,7 +87,7 @@ body {
     width: 100%;
     height: auto;
   }
-}
+
 
 .footer {
     flex-direction: column;
@@ -106,8 +106,7 @@ body {
 .footer-right {
     margin-top: 20px;
 }
-
-
+}
 
 
 /* FOOTER */
@@ -196,3 +195,4 @@ body {
   margin-top: 20px;
   }
 }
+
